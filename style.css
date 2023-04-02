@@ -6,6 +6,97 @@ Author: Pedro Ribeiro & Manuela Souza
 Author URI: https://github.com/furPedroRibeiro/
 Version: 1.0
 */
-span{
-    color: aquamarine;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
+    grid-template-rows: 10vh auto 10vh;
+    grid-template-columns: 100%;
+}
+a{
+    color: black;
+}
+.header{
+    grid-area: header;
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* fonts */
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.main{
+    grid-area: main;
+    margin: 5vw;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.defaultContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60vh;
+    gap: 1rem;
+
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+
+    /* text */
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.defaultContent .btn{
+    width: 12rem;
+    height: 3rem;
+
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: black;
+
+    transition: 1s;
+
+    /* font */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.defaultContent .btn:hover{
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+}
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    /* text */
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: justify;
 }
